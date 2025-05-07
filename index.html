@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教室分贝检测器</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入可爱字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 引入额外的火焰风格字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题区 -->
+        <header>
+            <h1>教室<span class="highlight">分贝</span>检测器</h1>
+        </header>
+
+        <!-- 主内容区 - 使用栅格布局 -->
+        <div class="content-wrapper">
+            <!-- 介绍语 -->
+            <div class="intro-text">
+                <p><span id="theme-intro-text">哪吒需要你的热情，让我们大声喊出来，用我们的声音为哪吒提供火焰能量！</span></p>
+            </div>
+
+            <!-- 设置面板 -->
+            <div class="panel settings-panel">
+                <h2>设置</h2>
+                <div class="setting-item">
+                    <label for="threshold-slider">分贝阈值（超过此值开始获取能量）：<span id="threshold-value">60</span>dB</label>
+                    <input type="range" id="threshold-slider" min="10" max="85" value="60" class="slider">
+                </div>
+                <div class="setting-item checkbox-item" style="display: none;">
+                    <label for="disable-warnings">
+                        <input type="checkbox" id="disable-warnings"> 
+                        <span class="checkbox-label">禁用大声警告</span>
+                    </label>
+                </div>
+                <div class="setting-buttons">
+                    <button id="start-btn" class="btn"><span class="btn-text">开始检测</span></button>
+                    <button id="pause-btn" class="btn btn-secondary"><span class="btn-text">暂停</span></button>
+                </div>
+                <div class="fullscreen-btn-container">
+                    <button id="fullscreen-btn" class="btn btn-icon">
+                        <i class="fas fa-expand"></i> <span class="btn-text">全屏</span>
+                    </button>
+                </div>
+                <div class="reset-button-container">
+                    <button id="reset-btn" class="btn">
+                        <span class="btn-text">重置</span>
+                    </button>
+                </div>
+                
+                <!-- 主题切换区域 -->
+                <div class="theme-switcher-container">
+                    <h3>主题切换</h3>
+                    <div class="theme-buttons">
+                        <button id="theme-nezha" class="theme-btn theme-btn-active">哪吒</button>
+                        <button id="theme-shijiNiangniang" class="theme-btn">石矶娘娘</button>
+                        <button id="theme-aoBing" class="theme-btn">敖丙</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分贝显示区 -->
+            <div class="panel decibel-display">
+                <div class="decibel-value-container">
+                    <span class="decibel-label">当前分贝：</span>
+                    <span id="current-decibel" class="decibel-value">0</span>
+                    <span class="decibel-unit">dB</span>
+                </div>
+                <div class="decibel-meter">
+                    <div id="decibel-meter-fill"></div>
+                </div>
+                <div class="decibel-status">
+                    <div id="status-emoji">🤗</div>
+                    <div id="status-text">点击开始按钮开始检测！</div>
+                </div>
+
+                <!-- 安静时间计时器 -->
+                <div class="quiet-timer">
+                    <div class="timer-label">已大声朗读时间：</div>
+                    <div class="timer-value" id="quiet-time">00:00:00</div>
+                </div>
+            </div>
+
+            <!-- 火焰能量面板 -->
+            <div class="panel energy-container">
+                <h2><span id="energy-title">火焰</span>能量</h2>
+                <div class="energy-bar">
+                    <div id="energy-fill" class="energy-fill"></div>
+                </div>
+                <div class="energy-info">
+                    <span>累计<span id="energy-element-name">火焰</span>数：</span>
+                    <span id="sunshine-count">0</span>
+                </div>
+                <div class="energy-info">
+                    <span>历史最高<span id="energy-element-name2">火焰</span>数：</span>
+                    <span id="max-sunshine-count">0</span>
+                </div>
+                <div class="flame-speed-container">
+                    <div class="flame-speed-label">
+                        <span><span id="energy-element-name3">火焰</span>生成速度：</span>
+                        <span id="flame-speed-value">5秒/个</span>
+                    </div>
+                    <input type="range" id="flame-speed-slider" min="5" max="200" value="50" class="slider">
+                    <div class="flame-speed-range">
+                        <span>快(0.5秒)</span>
+                        <span>慢(25秒)</span>
+                    </div>
+                </div>
+                <div class="energy-rule">
+                    <p>声音越大，<span id="energy-element-name4">火焰</span>能量积累越快！</p>
+                </div>
+            </div>
+
+            <!-- 树木成长区域 -->
+            <div class="forest-container">
+                <!-- 第一棵树 -->
+                <div class="tree-container" id="tree-1">
+                    <div class="tree">
+                        <!-- 哪吒主题：第一阶段成长图 -->
+                        <img src="成长图/哪吒/第一阶段的成长图.png" id="tree-1-img" alt="小树" class="tree-image">
+                    </div>
+                    <div class="tree-energy-bar">
+                        <div id="tree-1-energy-fill" class="tree-energy-fill"></div>
+                    </div>
+                    <div class="tree-progress">
+                        <span id="tree-1-progress">0/12</span>
+                    </div>
+                </div>
+                <!-- 更多树木会动态添加 -->
+            </div>
+        </div>
+
+        <!-- 火焰动画区 - 覆盖整个页面 -->
+        <div id="sunshine-container" class="sunshine-container">
+            <!-- 火焰会动态生成 -->
+        </div>
+        
+        <!-- 警告元素 -->
+        <div id="warning-container" class="warning-container" style="display: none;">
+            <img src="images/warning.svg" alt="警告" class="warning-icon">
+        </div>
+        
+        <!-- 低音量警告元素 -->
+        <div class="low-volume-warning" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.8); z-index: 1000; display: none; opacity: 0; transition: opacity 0.5s ease, transform 0.5s ease; background: transparent;">
+            <img src="images/warning2.png" alt="音量过低警告" style="width: 300px; height: auto; background: transparent;">
+            <div style="color: red; font-size: 24px; font-weight: bold; text-align: center; margin-top: 10px; background: transparent;">声音太小了，请大声朗读！</div>
+        </div>
+        
+        <!-- 警报声音频元素 -->
+        <audio id="warning-sound" preload="auto">
+            <source src="sounds/warning.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- 音效容器 -->
+        <div id="reminder-sounds" style="display: none;">
+            <!-- 音效文件会在JavaScript中动态加载 -->
+        </div>
+    </div>
+
+    <!-- 加载JavaScript文件 -->
+    <script src="script.js"></script>
+</body>
+</html> 
