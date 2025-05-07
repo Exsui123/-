@@ -1,0 +1,53 @@
+<svg width="200" height="250" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+    <!-- 成熟的树 - 阶段3 -->
+    
+    <!-- 土壤 -->
+    <ellipse cx="100" cy="230" rx="50" ry="15" fill="#8B6B61" />
+    
+    <!-- 主干 -->
+    <path d="M100 230 C100 180 100 130 100 100" stroke="#5D7D45" stroke-width="12" stroke-linecap="round" />
+    
+    <!-- 主要分支 -->
+    <path d="M100 150 C120 140 140 130 155 135" stroke="#5D7D45" stroke-width="8" stroke-linecap="round" />
+    <path d="M100 170 C80 160 60 150 45 155" stroke="#5D7D45" stroke-width="8" stroke-linecap="round" />
+    <path d="M100 130 C110 120 120 110 125 95" stroke="#5D7D45" stroke-width="6" stroke-linecap="round" />
+    <path d="M100 130 C90 120 80 110 75 95" stroke="#5D7D45" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- 大树冠 -->
+    <circle cx="100" cy="90" r="45" fill="#72B359" />
+    <circle cx="155" cy="135" r="25" fill="#72B359" />
+    <circle cx="45" cy="155" r="25" fill="#72B359" />
+    <circle cx="125" cy="95" r="20" fill="#72B359" />
+    <circle cx="75" cy="95" r="20" fill="#72B359" />
+    
+    <!-- 层次感的叶子 -->
+    <circle cx="85" cy="70" r="15" fill="#8EBD78" />
+    <circle cx="115" cy="70" r="15" fill="#8EBD78" />
+    <circle cx="70" cy="90" r="18" fill="#8EBD78" />
+    <circle cx="130" cy="90" r="18" fill="#8EBD78" />
+    <circle cx="100" cy="60" r="18" fill="#8EBD78" />
+    
+    <!-- 顶层亮色叶子 -->
+    <circle cx="90" cy="65" r="12" fill="#ADE792" />
+    <circle cx="110" cy="65" r="12" fill="#ADE792" />
+    <circle cx="100" cy="50" r="15" fill="#ADE792" />
+    
+    <!-- 脸部表情 - 超级开心 -->
+    <circle cx="90" cy="85" r="3.5" fill="#333" />
+    <circle cx="110" cy="85" r="3.5" fill="#333" />
+    <path d="M88 100 C94 105 106 105 112 100" stroke="#333" stroke-width="3" stroke-linecap="round" fill="none" />
+    
+    <!-- 苹果/花朵装饰 -->
+    <circle cx="75" cy="75" r="5" fill="#FF9E9E" />
+    <circle cx="130" cy="80" r="5" fill="#FF6B6B" />
+    <circle cx="115" cy="65" r="4" fill="#FFD893" />
+    <circle cx="85" cy="60" r="4" fill="#FFD893" />
+    <circle cx="110" cy="110" r="5" fill="#FF9E9E" />
+    <circle cx="80" cy="105" r="5" fill="#FF6B6B" />
+    
+    <!-- 小鸟 -->
+    <circle cx="140" cy="75" r="6" fill="#FFD893" />
+    <path d="M146 75 L155 70" stroke="#FFD893" stroke-width="3" stroke-linecap="round" />
+    <circle cx="142" cy="73" r="1.5" fill="#333" />
+    <path d="M146 77 L150 77" stroke="#333" stroke-width="1.5" stroke-linecap="round" />
+</svg> 

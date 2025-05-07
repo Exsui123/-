@@ -1,0 +1,49 @@
+<svg width="200" height="250" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+    <!-- 小树苗 - 阶段1 (更可爱的版本) -->
+    
+    <!-- 土壤与花盆 -->
+    <path d="M80 230 C75 225 70 220 70 215 C70 210 75 205 100 205 C125 205 130 210 130 215 C130 220 125 225 120 230 Z" fill="#B57A6A" />
+    <path d="M75 215 C75 210 80 207 100 207 C120 207 125 210 125 215 C125 220 120 225 115 228 C110 230 90 230 85 228 C80 225 75 220 75 215 Z" fill="#D89D88" />
+    
+    <!-- 主茎 -->
+    <path d="M100 205 C100 190 100 180 100 165" stroke="#6DA959" stroke-width="8" stroke-linecap="round" />
+    
+    <!-- 叶子组 - 更丰富和层次感 -->
+    <g transform="translate(100, 165) scale(1.2)">
+        <!-- 底层叶子 -->
+        <path d="M0 0 C-15 -5 -25 -15 -20 -25" stroke="#8FD694" stroke-width="5" stroke-linecap="round" />
+        <path d="M0 0 C15 -5 25 -15 20 -25" stroke="#8FD694" stroke-width="5" stroke-linecap="round" />
+        <path d="M0 0 C-10 -10 -15 -25 -8 -30" stroke="#8FD694" stroke-width="5" stroke-linecap="round" />
+        <path d="M0 0 C10 -10 15 -25 8 -30" stroke="#8FD694" stroke-width="5" stroke-linecap="round" />
+        
+        <!-- 中层叶子 -->
+        <path d="M0 -5 C-12 -12 -18 -20 -12 -28" stroke="#ADE792" stroke-width="4" stroke-linecap="round" />
+        <path d="M0 -5 C12 -12 18 -20 12 -28" stroke="#ADE792" stroke-width="4" stroke-linecap="round" />
+        
+        <!-- 顶层叶子 -->
+        <path d="M0 -10 C-5 -15 -7 -25 0 -32" stroke="#C1FFAB" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M0 -10 C5 -15 7 -25 0 -32" stroke="#C1FFAB" stroke-width="3.5" stroke-linecap="round" />
+    </g>
+    
+    <!-- 装饰小花/叶芽 -->
+    <circle cx="85" cy="175" r="3" fill="#FF9E9E" />
+    <circle cx="115" cy="175" r="3" fill="#FFD893" />
+    
+    <!-- 顶部芽 - 更圆润可爱 -->
+    <circle cx="100" cy="140" r="10" fill="#C1FFAB" />
+    
+    <!-- 脸部表情 - 更加可爱 -->
+    <circle cx="96" cy="138" r="2" fill="#333" />
+    <circle cx="104" cy="138" r="2" fill="#333" />
+    <path d="M94 143 C97 146 103 146 106 143" stroke="#333" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    
+    <!-- 装饰:小水珠 -->
+    <circle cx="88" cy="156" r="2" fill="#ADE7FF" opacity="0.8" />
+    <circle cx="112" cy="156" r="2" fill="#ADE7FF" opacity="0.8" />
+    
+    <!-- 小草点缀 -->
+    <path d="M75 228 C73 224 72 220 75 218" stroke="#ADE792" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M125 228 C127 224 128 220 125 218" stroke="#ADE792" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M85 230 C83 226 84 222 86 220" stroke="#8FD694" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M115 230 C117 226 116 222 114 220" stroke="#8FD694" stroke-width="1.5" stroke-linecap="round" />
+</svg> 

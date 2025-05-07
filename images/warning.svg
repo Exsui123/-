@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>警告图标</title>
+    <g id="警告" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- 三角形背景 -->
+        <path d="M100,15 L185,165 L15,165 Z" id="Triangle" stroke="#FF0000" stroke-width="10" fill="#FF0000"></path>
+        <!-- 白色边框 -->
+        <path d="M100,25 L175,155 L25,155 Z" id="Triangle-Border" stroke="#FFFFFF" stroke-width="5" fill="none"></path>
+        <!-- 感叹号 -->
+        <path d="M100,60 L100,120" id="Line" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round"></path>
+        <circle id="Dot" fill="#FFFFFF" cx="100" cy="140" r="10"></circle>
+    </g>
+</svg> 
